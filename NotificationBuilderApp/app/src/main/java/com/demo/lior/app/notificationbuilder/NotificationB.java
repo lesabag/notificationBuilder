@@ -3,11 +3,13 @@ package com.demo.lior.app.notificationbuilder;
 import android.app.Activity;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.widget.TextView;
 
-public class NotificationReceiverB extends Activity {
+public class NotificationB extends Activity {
 
     String str;
+    private String TAG = getPackageName() + "_" + getLocalClassName();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -17,11 +19,10 @@ public class NotificationReceiverB extends Activity {
 
     @Override
     protected void onStart() {
-        System.out.println("activityB started");
+        Log.i(TAG, "activityB started");
         super.onStart();
 
-        final TextView tv = (TextView)findViewById(R.id.tv);//called from textView
-
+        final TextView tv = (TextView)findViewById(R.id.tv);
         String value = null;
 
         Bundle extras = getIntent().getExtras();//getStringExtra (key)- bring the value directly from the key, if is unnecessary
@@ -30,11 +31,11 @@ public class NotificationReceiverB extends Activity {
             value = extras.getString("Activity");
             tv.setText(value);
 
-            System.out.println("activity Name = " + value);
+            Log.i(TAG, "activity Name = " + value);
         }
         else
         {
-            System.out.println("activity Name = " + value);
+            Log.i(TAG, "activity Name = " + value);
         }
 
     }

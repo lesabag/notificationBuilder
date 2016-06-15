@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/NotificationBuilder.iml" filepath="$PROJECT_DIR$/NotificationBuilder.iml" />
+      <module fileurl="file://$PROJECT_DIR$/NotificationBuilderApp.iml" filepath="$PROJECT_DIR$/NotificationBuilderApp.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
     </modules>
   </component>
